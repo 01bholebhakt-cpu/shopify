@@ -1,0 +1,50 @@
+{% section 'hero' %}
+{% section 'features' %}
+{% section 'products' %}
+
+
+
+
+==============================
+sections/hero.liquid
+==============================
+<section class="hero">
+<div class="hero-inner">
+<h1>{{ section.settings.heading }}</h1>
+<p>{{ section.settings.subheading }}</p>
+<a href="/collections/all" class="btn">Shop Now</a>
+</div>
+</section>
+
+
+{% schema %}
+{
+"name": "Hero Section",
+"settings": [
+{"type": "text", "id": "heading", "label": "Heading", "default": "Luxury. Power. Performance."},
+{"type": "text", "id": "subheading", "label": "Subheading", "default": "Designed for elite buyers"}
+]
+}
+{% endschema %}
+
+
+
+
+==============================
+sections/features.liquid
+==============================
+<section class="features">
+<div class="grid">
+<div class="card">Premium Build</div>
+<div class="card">Fast Delivery</div>
+<div class="card">Trusted by 10,000+</div>
+</div>
+</section>
+
+
+{% schema %}
+{
+"name": "Features",
+"settings": []
+}
+{% endschema %}
